@@ -1,5 +1,6 @@
-# Intelligent-data-management
+
 Intelligent data management
+
  [Demo Project] ![Screenshot 2024-10-06 225638](https://github.com/user-attachments/assets/0eb91fcd-790f-48c1-870d-9795c2f89156)
 - Developed by Sara Mousavi
 
