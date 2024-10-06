@@ -1,0 +1,412 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: #eef2f3; /* رنگ پس‌زمینه ملایم */
+    margin: 0;
+    padding: 20px;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='24' height='28' patternTransform='scale(3) rotate(40)'><rect x='0' y='0' width='100%' height='100%' fill='%23f2f4ffff'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z' transform='translate(2,0)' stroke-width='1' stroke='hsla(0,0%,100%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-9,-93)' fill='url(%23a)'/></svg>")
+}
+
+.container {
+    max-width: 800px; /* حداکثر عرض */
+    margin: auto; /* مرکز کردن */
+    background: white;
+    border-radius: 12px; /* گوشه‌های گرد */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* فضای داخلی بیشتر */
+}
+
+.header {
+    text-align: center; /* متن وسط‌چین */
+    margin-bottom: 20px; /* فاصله بیشتر */
+    background:linear-gradient(to right, #b8d7f3,#a9d0f5,#9ac9f4,);
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+}
+h1{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Vazirmatn', sans-serif;
+    margin-bottom: 10px;
+     color: #082f6b;
+    margin-top: 10px;
+    >i{
+        font-size: 20px;
+        margin-right: 10px;
+        color: #082f6b;
+    }
+
+}
+
+.input-section {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+   
+}
+
+.input-section input[type="text"] {
+    padding: 12px; /* padding بیشتر */
+    margin: 10px 0;
+    border: 1px solid #ccc; /* رنگ مرز ملایم */
+    border-radius: 6px; /* گوشه‌های گرد */
+    transition: border-color 0.3s; /* انیمیشن تغییر رنگ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);}
+
+.input-section input[type="text"]:focus {
+    border-color: #3498db; /* رنگ مرز در حالت فوکوس */
+    outline: none; /* حذف outline پیش‌فرض */
+}
+
+.amount-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.amount-input input[type="text"] {
+    flex: 1;
+    padding-right: 40px; /* فضای اضافی برای واحد پول */
+}
+
+.amount-input  {
+    position: relative;
+    top: 50%;
+    right: 10px;
+    transform: translatex(-0%);
+    color: #555;
+    font-size: 1rem;
+    margin-left: 14px;
+    
+}
+.currency{
+    position: absolute;
+    top: 36%;
+    right: -56%;
+    transform: translatex(-300px);
+    font-size: 15px;
+    margin-right: 5px;
+    font-family: 'Vazirmatn', sans-serif;
+    cursor: pointer;
+    transition: color 0.3s;
+    background-color: #fff;
+    padding: -30px 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.action-section {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top: 20px; /* فاصله بیشتر */
+}
+
+.add-btn, .print-btn {
+    background-color: #0d2570; /* رنگ دکمه */
+    color: white;
+    border: none;
+    padding: 12px 20px; /* padding بیشتر */
+    border-radius: 6px; /* گوشه‌های گرد */
+    cursor: pointer;
+    transition: background-color 0.3s; /* انیمیشن تغییر رنگ */
+}
+
+.add-btn:hover, .print-btn:hover {
+    background-color: #75caf1; /* رنگ تیره‌تر در حالت هاور */
+}
+
+.search-section {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px; /* فاصله بیشتر */
+}
+
+.search-section input[type="text"] {
+    flex: 1;
+    padding: 12px; /* padding بیشتر */
+    border: 1px solid #ccc; /* رنگ مرز ملایم */
+    border-radius: 6px; /* گوشه‌های گرد */
+    
+    transition: border-color 0.3s; /* انیمیشن تغییر رنگ */
+}
+
+.search-section input[type="text"]:focus {
+    border-color: #3498db; /* رنگ مرز در حالت فوکوس */
+}
+
+.search-section button {
+    background-color: #3498db; /* رنگ دکمه */
+    color: white;
+    padding: 12px; /* padding بیشتر */
+    border: none;
+    outline: none;
+    border-radius: 6px; /* گوشه‌های گرد */
+    cursor: pointer;
+    transition: background-color 0.3s; /* انیمیشن تغییر رنگ */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-section button:hover {
+    background-color: #bdf3fa; /* رنگ تیره‌تر در حالت هاور */
+}
+
+.expense-list {
+    margin-top: 30px; /* فاصله بیشتر */
+    background:linear-gradient(#e2eef6,#e0eef7);
+    padding: 20px; /* padding بیشتر */
+    border-radius: 6px; /* گوشه‌های گرد */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    >h2{
+        color: #192755;
+       
+    }
+
+
+}
+
+.total-section {
+    margin-top: 30px; /* فاصله بیشتر */
+    background: #eceff2;
+    padding: 20px; /* padding بیشتر */
+    border-radius: 6px; /* گوشه‌های گرد */
+    font-weight: bold; /* متن پررنگ */
+    >h3{
+       color:  #082f6b;
+       font-size: 25px;
+
+    }
+    #total{
+        color:rgb(46, 122, 75);
+        padding: 2px;
+        font-size: 20px; 
+    }
+    #average{
+        color: orangered;
+        padding: 2px;
+        font-size: 20px;
+    }
+    #date-range{
+        color: rgb(64, 72, 80);
+        font-size: 20px;
+        padding: 5px;
+        }
+}
+    
+
+li{
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Vazirmatn', sans-serif;
+    color: #0d2570;
+    font-weight: bold;
+    background-color: #e7f0f6;
+    >button{
+        background-color: #e4283a;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 15px;
+        font-family: 'Vazirmatn', sans-serif;
+        margin-right: 10px;
+        margin-left: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        &:hover{
+            background-color: #cc1b2c;
+        }
+    }
+    
+}
+.profile-content{
+    margin-left: -20%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 74%;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease;
+    bottom: 90%;
+    }
+    .content{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: transparent;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+       
+    }
+    .profile-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(500px, 10%);
+    width: 200px;
+    cursor: pointer;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+    
+    }
+    @keyframes slideIn {
+    0% {
+    top: -100%;
+    opacity: 0;
+    }
+    100% {
+    top: 50%;
+    opacity: 1;
+    }
+    }
+    .profile-name {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    
+    }
+    .profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    background-size:cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    border: 3px solid rgba(62, 61, 61, 0.358);
+    
+    }
+    .profile-container:hover .profile-image {
+    transform: scale(1.1);
+    }
+    .social-links {
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    }
+    .profile-container:hover .social-links {
+    opacity: 1;
+    }
+    .social-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    }
+    .social-links a:hover {
+    background-color: rgba(255, 255, 255, 1);
+    }
+    .add-btn, .print-btn {
+        /* ... existing styles ... */
+        transition: background-color 0.3s, transform 0.3s; /* انیمیشن تغییر رنگ و اندازه */
+    }
+    
+    .add-btn:hover, .print-btn:hover {
+        background-color: #75caf1; /* رنگ تیره‌تر در حالت هاور */
+        transform: scale(1.05); /* بزرگ‌تر شدن دکمه در حالت هاور */
+    }
+    
+    /* افزودن سایه به متن */
+    h1, .profile-name {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* سایه به متن */
+    }
+    
+    /* ... existing styles ... */
+
+/* ریسپانسیو برای اندازه‌های مختلف */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* کاهش padding برای صفحه‌های کوچک‌تر */
+    }
+    .currency {
+        text-align: center; /* تنظیم برای قرار گرفتن در سمت چپ */
+        right: 10px;
+
+    }
+
+    .input-section {
+        flex-direction: column; /* تغییر به ستون */
+        align-items: stretch; /* کشیدن به عرض کامل */
+    }
+
+    .input-section input[type="text"] {
+        width: 100%; /* عرض کامل */
+        margin: 5px 0; /* فاصله کمتر */
+    }
+
+    .action-section {
+        flex-direction: column; /* تغییر به ستون */
+        align-items: stretch; /* کشیدن به عرض کامل */
+    }
+
+    .add-btn, .print-btn {
+        width: 100%; /* عرض کامل */
+        margin: 5px 0; /* فاصله کمتر */
+    }
+
+    .search-section {
+        flex-direction: column; /* تغییر به ستون */
+        align-items: stretch; /* کشیدن به عرض کامل */
+    }
+
+    .search-section input[type="text"] {
+        width: 100%; /* عرض کامل */
+        margin: 5px 0; /* فاصله کمتر */
+    }
+
+    .expense-list {
+        padding: 10px; /* کاهش padding */
+    }
+    .profile-container {
+        width: 70%; /* عرض خیلی کمتر */
+        transform: translate(0, 15%); /* تنظیم موقعیت برای موبایل */
+    }
+
+    .profile-content {
+        width: 100%; /* عرض کامل */
+        height: auto; /* ارتفاع خودکار */
+        bottom: 90%; /* تنظیم موقعیت برای موبایل */
+    }
+
+    .social-links {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (max-width: 768px) {
+    .profile-content {
+        display: none;
+    }
+}
+
+
+
+/* ... existing styles ... */

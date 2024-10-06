@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت هوشمند هزینه‌ها</title>
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/persian-datepicker@latest/dist/css/persian-datepicker.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1><i class="fas fa-coins"></i> مدیریت هوشمند هزینه‌ها</h1>
+        <div class="input-section">
+            <!-- سطر اول: عنوان هزینه، شماره فاکتور، مقدار هزینه، تاریخ -->
+            <input type="text" id="title" placeholder="عنوان هزینه">
+            <input type="text" id="invoiceNumber" placeholder="شماره فاکتور">
+            <div class="amount-input">
+                <input type="text" id="amount" placeholder="مقدار هزینه">
+                <span class="currency">ریال</span>
+            </div>
+            <div class="date-input">
+                <input type="text" id="date" placeholder="تاریخ">
+            </div>
+        </div>
+        <!-- سطر دوم: افزودن هزینه و سرچ -->
+        <div class="action-section">
+            <button id="addExpenseBtn" class="add-btn"><i class="fas fa-plus"></i> افزودن هزینه</button>
+            <div class="search-section">
+                <input type="text" id="searchInput" placeholder="جستجو در هزینه‌ها...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+    
+        <!-- end of header -->
+
+        <!-- start of expense list -->
+        <div class="expense-list">
+            <h2><i class="fas fa-list"></i> لیست هزینه‌ها</h2>
+            <ul id="expenses"></ul>
+        </div>
+        </div>
+        <div class="total-section">
+            <h3><i class="fas fa-calculator"></i> خلاصه مالی</h3>
+            <p id="total">مجموع: 0 ریال</p>
+            <p id="average">میانگین: 0 ریال</p>
+            <p id="date-range">بازه زمانی: -</p>
+            <button id="print-btn" class="print-btn"><i class="fas fa-print"></i> پرینت گزارش</button>
+        </div>
+    </div>
+    <div class="profile-content">
+        <div class="content">
+            <div class="profile-container">
+                <div class="profile-name">Sara Mousavi</div>
+                <img src="img/-2147483648_-210106.jpg" alt="تصویر پروفایل" class="profile-image">
+                <div class="social-links">
+                    <a href="https://github.com/saaramousavi" target="_blank">GitHub</a>
+                    <a href="https://www.instagram.com/sara_mousavi.web?igsh=MTV4amlmeTMzd2RpZA==" target="_blank">Instagram</a>
+                    <a href="www.linkedin.com/in/sara-mousavi-893a1a2a7" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    <!-- end of expense list -->
+    <script src="https://unpkg.com/moment/min/moment.min.js"></script>
+    <script src="https://unpkg.com/moment-jalaali/build/moment-jalaali.js"></script>
+    <script src="https://unpkg.com/persian-datepicker@latest/dist/js/persian-datepicker.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
