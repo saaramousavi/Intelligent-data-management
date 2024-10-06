@@ -1,7 +1,9 @@
 
 Intelligent data management
 
- [Demo Project] ![Screenshot 2024-10-06 225638](https://github.com/user-attachments/assets/0eb91fcd-790f-48c1-870d-9795c2f89156)
+ ![Screenshot 2024-10-06 225638](https://github.com/user-attachments/assets/0eb91fcd-790f-48c1-870d-9795c2f89156)
+
+ [Demo Project] https://saaramousavi.github.io/Intelligent-data-management/
 - Developed by Sara Mousavi
 
 - Created - 2024-06-10
